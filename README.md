@@ -16,4 +16,4 @@ Uses official OpenSubtitles.org XMLRPC API, you can see API documentation [here]
 <img src="screenshots/screenshot01.png" width="400px" alt>
 <img src="screenshots/screenshot02.png" width="400px" alt>
 
-Project was developed in April 2016 as an assignment for course Java - development of applications at [University of Zilina - Faculty of Management Science and Informatics](http://www.fri.uniza.sk/).
+Project was developed in April 2016 as an assignment for course: Java - applications development at [University of Zilina - Faculty of Management Science and Informatics](http://www.fri.uniza.sk/).
