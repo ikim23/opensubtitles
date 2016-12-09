@@ -46,7 +46,7 @@ public class OSConfig {
      * @see
      * <a href="http://trac.opensubtitles.org/projects/opensubtitles/wiki/DevReadFirst#Howtorequestanewuseragent">OpenSubtitles.org</a>
      */
-    public static final String USER_AGENT = "OSTestUserAgent";
+    public static final String USER_AGENT = "OSTestUserAgentTemp";
     private static final Logger log = LoggerFactory.getLogger(OSConfig.class);
     private static final String CONFIG_FILE = "app.properties";
     private static OSConfig config;
