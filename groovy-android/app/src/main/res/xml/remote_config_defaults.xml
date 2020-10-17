@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>url</key>
+        <value>http://api.opensubtitles.org/xml-rpc</value>
+    </entry>
+    <entry>
+        <key>user_agent</key>
+        <value>OSTestUserAgentTemp</value>
+    </entry>
+    <entry>
+        <key>languages</key>
+        <value>[{"id":"alb","name":"Albanian"},{"id":"ara","name":"Arabic"},{"id":"ast","name":"Asturian"},{"id":"baq","name":"Basque"},{"id":"bre","name":"Breton"},{"id":"bul","name":"Bulgarian"},{"id":"cat","name":"Catalan"},{"id":"chi","name":"Chinese (simplified)"},{"id":"zht","name":"Chinese (traditional)"},{"id":"hrv","name":"Croatian"},{"id":"cze","name":"Czech"},{"id":"dan","name":"Danish"},{"id":"dut","name":"Dutch"},{"id":"eng","name":"English"},{"id":"epo","name":"Esperanto"},{"id":"est","name":"Estonian"},{"id":"fin","name":"Finnish"},{"id":"fre","name":"French"},{"id":"glg","name":"Galician"},{"id":"geo","name":"Georgian"},{"id":"ger","name":"German"},{"id":"ell","name":"Greek"},{"id":"heb","name":"Hebrew"},{"id":"hin","name":"Hindi"},{"id":"hun","name":"Hungarian"},{"id":"ice","name":"Icelandic"},{"id":"ind","name":"Indonesian"},{"id":"ita","name":"Italian"},{"id":"jpn","name":"Japanese"},{"id":"khm","name":"Khmer"},{"id":"kor","name":"Korean"},{"id":"mac","name":"Macedonian"},{"id":"may","name":"Malay"},{"id":"nor","name":"Norwegian"},{"id":"oci","name":"Occitan"},{"id":"per","name":"Persian"},{"id":"pol","name":"Polish"},{"id":"por","name":"Portuguese"},{"id":"pob","name":"Portuguese (BR)"},{"id":"rum","name":"Romanian"},{"id":"rus","name":"Russian"},{"id":"scc","name":"Serbian"},{"id":"sin","name":"Sinhalese"},{"id":"slo","name":"Slovak"},{"id":"slv","name":"Slovenian"},{"id":"spa","name":"Spanish"},{"id":"swe","name":"Swedish"},{"id":"tgl","name":"Tagalog"},{"id":"tha","name":"Thai"},{"id":"tur","name":"Turkish"},{"id":"ukr","name":"Ukrainian"},{"id":"uzb","name":"Uzbek"},{"id":"vie","name":"Vietnamese"}]</value>
+    </entry>
+</defaultsMap>

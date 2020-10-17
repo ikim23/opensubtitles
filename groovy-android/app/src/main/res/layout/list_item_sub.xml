@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:paddingEnd="@dimen/list_item_padding_vertical"
+        android:paddingRight="@dimen/list_item_padding_vertical">
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="@dimen/list_item_sub_circle_side"
+            android:layout_height="@dimen/list_item_sub_circle_side"
+            android:background="@drawable/background_circle"
+            android:gravity="center"
+            android:text="en"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/list_item_sub_circle_text_size"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sub_name"
+        style="@style/Text.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/fl"
+        android:layout_toRightOf="@+id/fl"
+        android:text="27 Dresses[Eng][Subs].en.HI.srt 27" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_name"
+        android:layout_toEndOf="@+id/fl"
+        android:layout_toRightOf="@+id/fl"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sub_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroud_sub_format"
+            android:paddingBottom="2sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="str"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <View
+            style="@style/Separator"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/list_item_subtitle_text_size" />
+
+        <TextView
+            android:id="@+id/pub_date"
+            style="@style/Text.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_access_time_black_18dp"
+            android:drawablePadding="3dp"
+            android:drawableStart="@drawable/ic_access_time_black_18dp"
+            android:gravity="center_vertical"
+            android:text="20.11.2015" />
+
+        <View
+            style="@style/Separator"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/list_item_subtitle_text_size" />
+
+        <TextView
+            android:id="@+id/download_count"
+            style="@style/Text.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_file_download_black_18dp"
+            android:drawableStart="@drawable/ic_file_download_black_18dp"
+            android:gravity="center_vertical"
+            android:text="1547" />
+    </LinearLayout>
+
+</RelativeLayout>
