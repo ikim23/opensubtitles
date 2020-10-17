@@ -1,0 +1,36 @@
+group 'sk.ikim23.jfx'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = 'sk.ikim23.opensubtitles.controller.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'org.codehaus.groovy:groovy-all:3.0.0-alpha-1'
+    compile 'org.codehaus.groovy:groovy-xmlrpc:0.8'
+    compile 'org.controlsfx:controlsfx:8.40.14'
+
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4.1'
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'FatJar',
+                'Implementation-Version': version,
+                'Main-Class': mainClassName
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
