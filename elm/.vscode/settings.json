@@ -1,0 +1,17 @@
+{
+  "[elm]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "files.exclude": {
+    "build": true,
+    "elm-stuff": true,
+    "node_modules": true,
+    ".npmrc": true,
+    "package-lock.json": true
+  }
+}
