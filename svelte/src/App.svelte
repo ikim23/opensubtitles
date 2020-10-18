@@ -3,12 +3,13 @@
   import File from './File.svelte'
   import Radio from './Radio.svelte'
   import { USER_AGENT, LANGUAGES } from './constants'
-  import { search } from './api'
+  import { hash } from './hash'
+  import { searchByQuery, searchByHash } from './api'
 
   let userAgent = USER_AGENT
   let languages = LANGUAGES
-  let searchByFile = false
-  let query = 'batman begins'
+  let searchByFile = true
+  let query = ''
   let files
   let movies = []
 
@@ -17,6 +18,12 @@
       query = ''
     } else {
       files = null
+    }
+  }
+
+  $: {
+    if (files && files.length) {
+      byHash(files[0])
     }
   }
 
@@ -42,14 +49,24 @@
     }
   }
 
-  async function searchByQuery() {
-    movies = await search({ userAgent, languages, query })
+  const byQuery = async () => {
+    movies = await searchByQuery({ userAgent, languages, query })
+  }
+  const byHash = () => {
+    hash(files[0], (file, hash) => {
+      console.log(file, 'h', hash)
+      searchByHash({ userAgent, languages, hash, size: file.size }).then(
+        (newMovies) => {
+          movies = newMovies
+        }
+      )
+    })
   }
 </script>
 
 <div class="container">
   <div class="section">
-    <form action="javascript:void(0);" on:submit={searchByQuery}>
+    <form action="javascript:void(0);" on:submit={byQuery}>
       <div class="columns level">
         <div class="column is-2">
           <label class="label" for="userAgent">User Agent:</label>
