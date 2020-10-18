@@ -20,6 +20,28 @@
     }
   }
 
+  const sortBy = (prop) => {
+    let lastSortedBy = ''
+    let ascending = -1
+    return () => {
+      if (lastSortedBy === prop) {
+        ascending = ascending * -1
+      }
+      lastSortedBy = prop
+
+      let comparator
+      const propType = typeof movies[0][prop]
+      if (propType === 'string') {
+        comparator = (a, b) => a[prop].localeCompare(b[prop]) * ascending
+      } else if (propType === 'number') {
+        comparator = (a, b) => (a[prop] - b[prop]) * ascending
+      }
+
+      movies.sort(comparator)
+      movies = movies
+    }
+  }
+
   async function searchByQuery() {
     movies = await search({ userAgent, languages, query })
   }
@@ -104,8 +126,10 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Added</th>
-            <th>Downloaded</th>
+            <th class="is-clickable" on:click={sortBy('added')}>Added</th>
+            <th class="is-clickable" on:click={sortBy('downloadCount')}>
+              Downloaded
+            </th>
             <th>Name</th>
             <th />
           </tr>
