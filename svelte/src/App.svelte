@@ -1,30 +1,52 @@
 <script>
-	export let name;
+  const languages = ['eng', 'svk', 'cze']
+  let userAgent = 'TemporaryUserAgent'
+  let query = ''
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<div class="container">
+  <div class="section">
+    <form action="#">
+      <div class="columns level">
+        <div class="column is-2">
+          <label class="label" for="userAgent">User Agent:</label>
+        </div>
+        <div class="column is-10">
+          <input
+            class="input"
+            type="text"
+            name="userAgent"
+            bind:value={userAgent} />
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-2">
+          <label class="label" for="userAgent">Languages:</label>
+        </div>
+        <div class="column is-10">
+          {#each languages as lng}
+            <span class="mr-4">
+              <input type="radio" id={lng} />
+              <label class="radio ml-1" for={lng}>{lng.toUpperCase()}</label>
+            </span>
+          {/each}
+        </div>
+      </div>
+      <div class="columns level">
+        <div class="column is-2">
+          <label class="label" for="query">Query:</label>
+        </div>
+        <div class="column is-8">
+          <input class="input" type="text" name="query" bind:value={query} />
+        </div>
+        <div class="column is-2">
+          <button
+            class="button is-fullwidth is-primary"
+            type="submit"
+            disabled={!query.length}>Search</button>
+        </div>
+      </div>
+    </form>
+    <div class="section">// table</div>
+  </div>
+</div>
