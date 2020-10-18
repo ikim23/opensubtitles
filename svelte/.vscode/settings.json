@@ -9,6 +9,7 @@
   },
   "files.exclude": {
     "node_modules": true,
+    ".editorconfig": true,
     ".npmrc": true,
     "package-lock.json": true
   }

@@ -1,9 +1,10 @@
 {
-  "name": "svelte-app",
+  "name": "opensubtitles",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "start": "sirv public"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "14.0.0",

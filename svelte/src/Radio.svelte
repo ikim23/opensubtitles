@@ -1,9 +1,12 @@
 <script>
-  export let id
+  export let group
+  export let value
   export let label
 </script>
 
 <span class="mr-4">
-  <input type="radio" {id} />
-  <label class="radio ml-1" for={id}>{label}</label>
+  <label class="radio">
+    <input type="radio" bind:group {value} />
+    {label}
+  </label>
 </span>
