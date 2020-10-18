@@ -1,14 +1,18 @@
 {
   "name": "opensubtitles",
   "version": "1.0.0",
+  "homepage": "https://ikim23.github.io/opensubtitles",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "14.0.0",
     "@rollup/plugin-node-resolve": "8.0.0",
+    "gh-pages": "3.1.0",
     "prettier": "2.1.2",
     "prettier-plugin-svelte": "1.4.1",
     "rollup": "2.3.4",
@@ -25,6 +29,6 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "svelteSortOrder" : "scripts-markup-styles"
-  }  
+    "svelteSortOrder": "scripts-markup-styles"
+  }
 }
